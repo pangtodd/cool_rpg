@@ -1,15 +1,14 @@
-//sample test below
+import LivingThing from '../src/js/livingThing';
 
-// import Triangle from './../src/js/triangle.js';
+describe('LivingThing', () => {
 
-// describe('Triangle', () => {
-
-//   test('should correctly create a triangle object with three lengths', () => {
-//     const triangle = new Triangle(2,4,5);
-//     expect(triangle.side1).toEqual(2);
-//     expect(triangle.side2).toEqual(4);
-//     expect(triangle.side3).toEqual(5);
-//   });
+  test('should correctly create a LivingThing object with three attributes', () => {
+    const livingThingOne = new LivingThing("name", 100, 80);
+    expect(livingThingOne.name).toEqual("name");
+    expect(livingThingOne.health).toEqual(100);
+    expect(livingThingOne.attackPower).toEqual(80);
+  });
+});
 //   test('should correctly determine whether three lengths are not a triangle', () => {
 //     const notTriangle = new Triangle(3,9,22);
 //     expect(notTriangle.checkType()).toEqual("not a triangle");

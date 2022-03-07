@@ -17,7 +17,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(), // new line
     new HtmlWebpackPlugin({
-      title: 'Shape Tracker',
+      title: 'cool_rpg',
       template: './src/index.html',
       inject: 'body'
     })
