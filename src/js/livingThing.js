@@ -9,16 +9,18 @@ export default class LivingThing {
 var diceRoll = function () {
   return Math.floor(Math.random() * 6) + 1;
 }
-  LivingThing.prototype.heroStartingStats = function() {
-    this.health = diceRoll() * 2
-    this.attackPower = diceRoll()
-  };
-  
-  LivingThing.prototype.attackValue = function () {
-  return this.attackPower;
+
+LivingThing.prototype.heroStartingStats = function() {
+  this.health = diceRoll() * 2
+  this.attackPower = diceRoll()
 };
-  const villain1 = new LivingThing("gorsh", 3, 2)
-  const villain2 = new LivingThing("mish", 5, 4)
+  
+LivingThing.prototype.attackValue = function () {
+return this.attackPower;
+};
+
+  // const villain1 = new LivingThing("gorsh", 3, 2)
+  // const villain2 = new LivingThing("mish", 5, 4)
 
 
 

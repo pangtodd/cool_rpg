@@ -17,9 +17,8 @@ describe('LivingThing', () => {
   });
   test('should correctly add a die roll to the attackPower', () => {
     // const dieRollHealth = new LivingThing.heroStartingStats();
-    const playerAttack = new LivingThing;
-    playerAttack.attackValue();
-    expect(playerAttack.attackPower).toBeLessThan(13);
+    const playerAttack = new LivingThing("hero2", 3, 5);
+    expect(playerAttack.attackValue()).toBeLessThan(13);
   });
 });
 
