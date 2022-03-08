@@ -8,7 +8,23 @@ describe('LivingThing', () => {
     expect(livingThingOne.health).toEqual(100);
     expect(livingThingOne.attackPower).toEqual(80);
   });
+  test('should correctly add a random number to the health & attack power', () => {
+    // const dieRollHealth = new LivingThing.heroStartingStats();
+    const dieRollHealth = new LivingThing;
+    dieRollHealth.heroStartingStats();
+    expect(dieRollHealth.health).toBeLessThan(13);
+    expect(dieRollHealth.attackPower).toBeLessThan(7);
+  });
+  test('should correctly add a die roll to the attackPower', () => {
+    // const dieRollHealth = new LivingThing.heroStartingStats();
+    const playerAttack = new LivingThing;
+    playerAttack.attackValue();
+    expect(playerAttack.attackPower).toBeLessThan(13);
+  });
 });
+
+
+
 //   test('should correctly determine whether three lengths are not a triangle', () => {
 //     const notTriangle = new Triangle(3,9,22);
 //     expect(notTriangle.checkType()).toEqual("not a triangle");

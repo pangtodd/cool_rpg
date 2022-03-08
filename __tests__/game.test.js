@@ -7,5 +7,4 @@ describe('Game', () => {
     let gameOne = new Game(hero);
     expect(gameOne.livingThings).toEqual(hero);
   });
-}
-
+})
