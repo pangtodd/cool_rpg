@@ -4,6 +4,23 @@ export default class LivingThing {
     this.health = health;
     this.attackPower = attackPower;
   }
+}
+
+var diceRoll = function () {
+  return Math.floor(Math.random() * 6) + 1;
+}
+  LivingThing.prototype.heroStartingStats = function() {
+    this.health = diceRoll() * 2
+    this.attackPower = diceRoll()
+  };
+  
+  LivingThing.prototype.attackValue = function () {
+  return this.attackPower;
+};
+  const villain1 = new LivingThing("gorsh", 3, 2)
+  const villain2 = new LivingThing("mish", 5, 4)
+
+
 
   // checkType() {
   //   if ((this.side1 > (this.side2 + this.side3)) || (this.side2 > (this.side1 + this.side3)) || (this.side3 > (this.side1 + this.side2))) {
@@ -16,4 +33,3 @@ export default class LivingThing {
   //     return "isosceles triangle";
   //   }
   // }    
-}
