@@ -23,7 +23,7 @@ return this.attackPower + diceRoll();
 
 LivingThing.prototype.heal = function() {
   if (this .battleHeath >= this.health){
-    this.battleHealth = this.health
+    this.battleHealth = this.health ///doesnt work
   }else if (this.battleHealth >= 10) {
       let healPoints = this.battleHealth * .25
       this.battleHealth = healPoints + this.battleHealth
@@ -57,4 +57,3 @@ LivingThing.prototype.heal = function() {
   //       let healPoints = this.battleHealth * .5
   //       this.battleHealth = healPoints + this.battleHealth
   //   }
-  // };
