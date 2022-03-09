@@ -3,9 +3,10 @@ import LivingThing from '../src/js/livingThing';
 describe('LivingThing', () => {
 
   test('should correctly create a LivingThing object with three attributes', () => {
-    const livingThingOne = new LivingThing("name", 100, 80);
+    const livingThingOne = new LivingThing("name", 100, 100, 80);
     expect(livingThingOne.name).toEqual("name");
     expect(livingThingOne.health).toEqual(100);
+    expect(livingThingOne.battleHealth).toEqual(100);
     expect(livingThingOne.attackPower).toEqual(80);
   });
   test('should correctly add a random number to the health & attack power', () => {
@@ -17,10 +18,16 @@ describe('LivingThing', () => {
   });
   test('should correctly add a die roll to the attackPower', () => {
     // const dieRollHealth = new LivingThing.heroStartingStats();
-    const playerAttack = new LivingThing("hero2", 3, 5);
+    const playerAttack = new LivingThing("hero2", 4, 4, 5);
     expect(playerAttack.attackValue()).toBeLessThan(13);
   });
+  test('should correctly adjust battleHealth, depending on current battleHealth', () => {
+    const playerHeal = new LivingThing("hero2", 4, 4, 5);
+    playerHeal.heal();
+    expect(playerHeal.battleHealth).toEqual(6);
+  }); 
 });
+
 
 
 
